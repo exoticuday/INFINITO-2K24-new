@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Atmospheric";
+  src: url("../font/aAtmospheric.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e272e;
+  color: #ecf0f1;
+}
+
+main {
+  display: flex;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 100;
+  color: #000000;
+  text-shadow: none;
+  margin: 0;
+  font-family: "Atmospheric", sans-serif;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sidebar {
+  width: 30%; /* Adjust width as needed */
+  height: 100vh;
+  background-color: #2f3640;
+  padding: 1em;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  overflow: hidden; /* Hide scrollbar */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow: hidden; /* Hide scrollbar */
+  height: 100%; /* Full height of sidebar */
+  position: relative;
+}
+
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%; /* Double the height to ensure infinite scrolling */
+}
+
+.sidebar-item {
+  background-color: #9c88ff;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebar-item:hover {
+  background-color: #8c7ae6;
+}
+
+.sidebar-icon {
+  width: 40px; /* Adjust the size of the images as needed */
+  height: 40px;
+  margin-bottom: 0.5em;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2em;
+  margin-left: 30%; /* Adjust margin to match the increased width of the sidebar */
+  background-color: #1e272e;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.main-content h1 {
+  font-size: 2.5em;
+  margin: 0 0 20px 0;
+}
+
+.main-content p {
+  font-size: 1.2em;
+}
+
+/* Infinite scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Adjust according to the content height */
+  }
+}
+
+.sidebar-items {
+  animation: scroll 10s linear infinite; /* Adjust the duration as needed */
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.event-details {
+  background-color: #3e424843;
+  padding: 2em;
+  margin-left: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-details h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #ecf0f1;
+}
+
+.event-details p {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  color: #bdc3c7;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-button {
+  background-color: #988dcd62;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  color: #ecf0f1;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 0.5em;
+}
+/* Styles for the button container */
+.buttons.svelte-12ryxuf.svelte-12ryxuf {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for buttons inside the container */
+.svelte-12ryxuf > a.svelte-12ryxuf {
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  background-color: #ededed23;
+  border: none;
+  padding: 1.2em 1.5em;
+  font-size: 1em;
+  color: #ecf0f1;
+  cursor: pointer;
+  border-radius: 100px;
+  margin-right: 0.5em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.svelte-12ryxuf > a.svelte-12ryxuf:hover {
+  background-color: #8a89893a; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Styles for the button container on hover */
+.svelte-12ryxuf.svelte-12ryxuf {
+  padding: 0.8em;
+  padding-inline: 1em;
+  border-radius: 0.4em;
+  border: unset;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.date {
+  font-size: 20px;
+  font-family: "Atmospheric", sans-serif;
+}

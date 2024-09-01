@@ -1,0 +1,136 @@
+@import url("https://fonts.cdnfonts.com/css/a-atmospheric");
+
+.container {
+  flex: 1;
+  /* width: 80%; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.AboutUs {
+  font-family: "a Atmospheric", sans-serif;
+  font-size: 80px;
+}
+
+.paragraph {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: justify;
+  margin: 20px auto;
+  width: 75%; /* Adjust the width as needed */
+  color: black;
+}
+
+.OurTeam {
+  font-size: 60px;
+  color: black;
+}
+
+.teamMember {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.teamMember img {
+  width: 250px;
+  height: auto;
+  border-radius: 7px;
+}
+
+.name,
+.email {
+  margin-top: 10px;
+  display: block;
+  text-align: center; /* Ensures text is centered with respect to its container */
+}
+
+.assist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Adjusted gap for better spacing */
+  flex-wrap: wrap; /* Ensures images wrap on smaller screens */
+}
+
+.assistMember {
+  text-align: center;
+}
+
+.assist img {
+  width: 250px; /* Adjust width for better fit */
+  height: auto;
+  border-radius: 7px;
+  border: 3px rgb(228, 222, 222);
+}
+
+.assistName,
+.assistEmail {
+  margin-top: 10px;
+}
+
+.name,
+.assistName {
+  color: yellow;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footerLeft {
+  display: flex;
+}
+
+.footerRight {
+  display: flex;
+}
+.footerLeft a,
+.footerRight a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.footerCenter a {
+  margin: 0 px;
+  color: white; /* Added color for icons */
+  font-size: 24px; /* Adjusted size for icons */
+}
+
+.footerCenter a:hover,
+.footerRight a:hover {
+  opacity: 0.8;
+}
+
+h3 {
+  color: pink;
+  font-size: 30px;
+}
+
+@media (max-width: 930px) {
+  .AboutUs {
+    font-size: 40px;
+  }
+}

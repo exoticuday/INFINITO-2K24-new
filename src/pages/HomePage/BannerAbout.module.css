@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  z-index: 2;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  place-items: center;
+  position: relative;
+  height: 100vh;
+  flex-direction: column;
+}
+.container h1 span {
+  font-family: "a Atmospheric", sans-serif;
+}
+
+@media (max-width: 930px) {
+  .container {
+    height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.title {
+  font-family: var(--pfont);
+  font-size: 90px;
+  font-weight: 1000;
+  margin: 0;
+  /* padding: 6rem 0; */
+}
+
+@media (max-width: 930px) {
+  .title {
+    font-size: 35px;
+    display: inline;
+  }
+}
+
+.title span {
+  font-size: 90px;
+  color: #8f60c1;
+}
+
+@media (max-width: 930px) {
+  .title span {
+    display: block;
+    font-size: 40px;
+    color: #8f60c1;
+  }
+}
+
+.container p {
+  text-align: justify;
+  line-height: 1.5em;
+  width: 90%;
+  font-size: 20px;
+}
+
+@media (max-width: 930px) {
+  .container p {
+    text-align: justify;
+  }
+  .title {
+    margin-bottom: 3rem;
+    padding-top: 2.5rem;
+  }
+  .container p {
+    text-align: justify;
+    line-height: 1.45em;
+  }
+}

@@ -1,0 +1,139 @@
+@import url("https://fonts.cdnfonts.com/css/a-atmospheric");
+
+.container {
+  z-index: 2;
+  display: flex;
+
+  position: relative;
+  height: 100vh;
+  flex-direction: column;
+  place-items: center;
+  padding-top: 3em;
+  background-color: black;
+}
+.container h1 {
+  font-size: 90px;
+  font-weight: 1000;
+  color: white;
+  font-family: "a Atmospheric", sans-serif;
+  margin: 3rem 0;
+}
+
+.inputField {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.inputField input {
+  width: 40rem;
+  height: 4rem;
+  border-radius: 6px;
+  padding: 0 15px;
+
+  background: transparent;
+  outline: none;
+  color: #fff;
+}
+
+.inputField label {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  font-size: 19px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.614);
+}
+input:focus {
+  border: 2px solid #1cd679;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  font-size: 16px;
+  padding: 0 10px;
+  background-color: black;
+}
+
+.textArea {
+  padding: 1.5%;
+  margin-top: 0.5%;
+  font-size: 24px;
+  border-radius: 2rem;
+  width: 55%;
+  background-color: black;
+  border: 2px solid #7a7a7a;
+  color: #fff;
+  text-indent: 3%;
+  width: 40rem;
+  height: 10rem;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 930px) {
+  .textArea {
+    height: 10em;
+  }
+}
+
+@media (max-width: 930px) {
+  .container h1 {
+    font-size: 35px;
+    display: inline;
+  }
+  .inputField input {
+    width: 20rem;
+    height: 4rem;
+  }
+  .textArea {
+    width: 20rem;
+    height: 8rem;
+  }
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 4rem;
+  text-align: center;
+  border: 0.1rem solid #852999;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #852999;
+}
+
+.btn:active {
+  letter-spacing: 0.2rem;
+}
+.btn::before {
+  content: "SUBMIT";
+}
+
+.effect2 {
+  background-color: #852999;
+}
+
+.btn:active::before {
+  content: "✓";
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #852999;
+  z-index: 2;
+}

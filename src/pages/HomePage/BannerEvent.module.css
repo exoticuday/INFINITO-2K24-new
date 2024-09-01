@@ -1,0 +1,77 @@
+@import url("https://fonts.cdnfonts.com/css/a-atmospheric");
+
+.container {
+  z-index: 2;
+  display: flex;
+  width: 100vw;
+
+  justify-content: center;
+  place-items: center;
+  position: relative;
+  height: 100vh;
+
+  flex-direction: column;
+  margin: 0;
+  background-color: black;
+}
+
+.container h1 {
+  font-size: 90px;
+  font-weight: 1000;
+  color: white;
+  margin-bottom: 0;
+  display: block;
+  font-family: "a Atmospheric", sans-serif;
+}
+
+@media (max-width: 930px) {
+  .container h1 {
+    font-size: 35px;
+    display: inline;
+  }
+}
+
+.event {
+  text-align: center;
+  height: 65vh;
+  aspect-ratio: 0.95;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  display: grid;
+
+  font-size: 40px;
+  filter: grayscale(100%);
+  font-family: var(--wfont);
+  text-decoration: unset;
+  margin-inline: 0.2em;
+  place-items: center;
+  transition: all 0.2s ease-in 0s;
+}
+
+.event:hover {
+  filter: grayscale(0);
+}
+
+@media screen and (min-width: 930px) {
+  .event {
+    width: 27vw;
+    height: 45vh;
+    margin-top: 1em;
+    margin-bottom: 0.1rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .event {
+    height: 24vh;
+    width: 54vw;
+    margin-bottom: 1em;
+    filter: unset;
+  }
+}
+
+@media (max-width: 930px) {
+  .slid {
+    flex-direction: column;
+  }
+}
