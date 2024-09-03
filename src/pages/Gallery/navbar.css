@@ -1,0 +1,140 @@
+/* .nav{
+    width:70%;
+    background-color: #3d3d3d74;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4rem;
+    margin-top:1rem;
+    border-radius: 100vh;
+    font-family: "Raleway", sans-serif;
+    color:white;
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top:0;
+    left:15%;
+    z-index: 4;
+    cursor:pointer;
+}
+.nav a{
+    color:white;
+    text-decoration: none;
+}  */
+
+
+
+
+
+/* //----------------------------------------------------------------------------------------------------------- */
+
+
+
+/* navbar.css */
+
+.nav {
+    width: 100%;  /* Full width */
+    background-color: #3d3d3d74;
+    display: flex;
+    justify-content: center;  /* Centered content */
+    align-items: center;
+    height: 4rem;
+    margin-top: 1rem;
+    border-radius: 100vh;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    backdrop-filter: blur(12px);
+    /* position: f; */
+    top: 0;
+    z-index: 4;
+    cursor: pointer;
+    /* Prevent text selection on mobile */
+    user-select: none;
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: none;  /* Hidden by default */
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  /* Desktop Menu */
+  .desktop-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+  }
+  
+  /* Style for links */
+  .nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Dropdown menu styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3d3d3d74;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #2d2d2d;
+  }
+  
+  /* Show dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #3d3d3d74;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 5;
+  }
+  
+  .mobile-menu a {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+  
+  .mobile-menu a:hover {
+    background-color: #2d2d2d;
+  }
+  
+  /* Show the mobile menu when the menu icon is clicked */
+  @media (max-width: 980px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .desktop-menu {
+      display: none;  /* Hide the desktop menu on small screens */
+    }
+  
+    .mobile-menu {
+      display: flex;  /* Show the mobile menu */
+    }
+  }
+  
