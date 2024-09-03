@@ -1,0 +1,234 @@
+
+
+
+.imgmerch{
+    /* border: 2px solid blue; */
+    max-width: 90%;
+    max-height: 100%;
+    /* margin-left: 52px; */
+    object-fit: contain; /* or cover depending on the desired effect */
+}
+.imgmerch2{
+    /* border: 2px solid blue; */
+    max-width: 300px;
+    max-height: 228px;
+    /* margin-left: 52px; */
+    object-fit: contain; /* or cover depending on the desired effect */
+}
+.box2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.box{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* border: 2px solid rebeccapurple; */
+    width: 95vw;
+    justify-content: space-evenly;
+}
+
+
+@font-face {
+  font-family: 'Atmospheric';
+  src: url('aAtmospheric.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Gradient rotation animation for the button background */
+@keyframes gradient-rotation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.events {
+  margin: 0;
+  padding: 0;
+  /* height: 100vh; */
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./bg2.png);
+  font-family: Arial, sans-serif,;
+  /* background-color: rgba(14, 13, 13, 0.7); */
+}
+
+
+
+.events::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Adjust opacity as needed */
+  z-index: -1;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 100;
+  color: #ffffff;
+  text-shadow: none;
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: 'Atmospheric', sans-serif;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.title:hover {
+  color: #e0e0e0;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  font-family: "a Atmospheric", sans-serif;
+  right: 0;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.title:hover::after {
+  width: 100%;
+  left: 0;
+  background: #e0e0e0;
+}
+
+
+.workButton {
+  padding: 1.0em 2.4em;
+  border: none;
+  outline: none;
+  margin: 12px;
+  font-weight: bold;
+  font-size: large;
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-image: linear-gradient(45deg, #ff9933, #ff3333, #9933ff, #33cc33);
+  background-size: 200% 200%;
+  animation: gradient-rotation 5s infinite linear;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.workButton:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.workButton:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.workButton:hover {
+  transform: scale(1.1); /* Expand the button */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and larger screens */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5em;
+    
+  }
+
+  .workButton {
+    padding: 8px 30px;
+    font-size: 1.1em;
+  }
+}
+
+/* Tablets and small screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .workButton {
+    padding: 8px 30px;
+    font-size: 1em;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .workButton {
+    padding: 5px 20px;
+    font-size: 0.9em;
+  }
+}
+

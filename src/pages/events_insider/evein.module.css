@@ -1,0 +1,286 @@
+/* General Styles */
+
+@font-face {
+  font-family: 'Atmospheric';
+  src: url('aAtmospheric.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sportsPage {
+    /* background-image: url(bg3.jpg); */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
+    /* background: linear-gradient(135deg, #1e1e1e, #2c2c2c);  */
+    min-height: 100vh;
+    color: #fff;
+    background-image: url(../bg2.png);
+  }
+
+  .sportName{
+    text-align: center;
+  }
+
+  .title{
+    text-align: center;
+    font-family: 'Atmospheric', sans-serif;
+    padding: 18px;
+    font-size: xxx-large;
+  }
+  
+  .sportsIcons {
+    display: flex;
+    flex-wrap: wrap; /* Wrap icons if needed */
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Add space between icons */
+    margin-top: 16px;
+  }
+  
+  .sportIcon {
+    cursor: pointer;
+    width: 160px; /* Default width */
+    height: 160px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b, #ffcc33); /* Neon gradient */
+    padding: 15px;
+    border-radius: 10px;
+    margin: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sportIcon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3); /* Brighter glow on hover */
+  }
+  
+  .sportImage {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)); /* Neon glow around images */
+  }
+  
+  .eventDescription {
+    width: 100%; /* Full width */
+    padding: 20px;
+    /* background: #1e1e1e;  */
+    /* background-image: url(bg3.jpg); */
+    /* opacity: 75%; */
+    border-radius: 12px;
+    /* box-shadow: 0 0 25px rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(10px);  */
+    margin-top: 28px;
+  }
+  
+  .descriptionBox h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #ffcc33; /* Neon yellow title */
+    text-shadow: 0 0 8px rgba(255, 204, 51, 0.8), 0 0 15px rgba(255, 204, 51, 0.6); /* Neon text glow */
+  }
+  
+  .descriptionBox p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+  
+  .placeholder {
+    color: #888;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 100px;
+    opacity: 0.7;
+  }
+  
+  /* Event Details Styles */
+  .eventDetails {
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 900px;
+    /* background: linear-gradient(135deg, #1e1e1e, #2c2c2c);  */
+  }
+  
+  .date {
+    font-size: 18px;
+    color: #00ff99; /* Neon green */
+    margin: 10px 0;
+  }
+  
+  .description {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin: 10px 0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .register {
+    background: #ff007f; /* Neon pink */
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .register:hover {
+    background: #cc0057; /* Darker neon pink */
+    transform: scale(1.05);
+  }
+  
+  .open {
+    background: #00ff99; /* Neon green */
+  }
+  
+  .closed {
+    background: #333; /* Dark grey */
+    cursor: not-allowed;
+  }
+  
+  .rulebook {
+    background: #ff6600; /* Neon orange */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+    transition: background 0.3s;
+    font-size: 18px;
+  }
+  
+  .rulebook:hover {
+    background: #cc5200; /* Darker neon orange */
+  }
+  
+  /* Event Sections */
+  .secondaryContent {
+    margin-top: 20px;
+  }
+  
+  .structure, .rules, .judgingCriteria, .prizes {
+    margin-top: 20px;
+    padding: 15px;
+    /* background: #1e1e1e;  */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .structure h3, .rules h3, .judgingCriteria h3, .prizes h3 {
+    font-size: 22px;
+    color: #00ff99; /* Neon green */
+    margin-bottom: 10px;
+  }
+  
+  .structure p, .rules p, .judgingCriteria p, .prizes p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin: 5px 0;
+  }
+  
+  .prizes p {
+    font-weight: bold;
+    color: #ffcc00; /* Neon yellow */
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .h1{
+        font-size: 3rem;
+    }
+    .sportIcon {
+      width: 100px; /* Adjust width for tablets and smaller desktops */
+    }
+  
+    .descriptionBox h2 {
+      font-size: 1.8rem;
+    }
+  
+    .descriptionBox p {
+      font-size: 1rem;
+    }
+  
+    .eventDetails {
+      max-width: 750px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .h1{
+        font-size: 2rem;
+    }
+    .sportIcon {
+      width: 80px; /* Adjust width for tablets */
+    }
+  
+    .descriptionBox h2 {
+      font-size: 1.6rem;
+    }
+  
+    .descriptionBox p {
+      font-size: 0.9rem;
+    }
+  
+    .eventDetails {
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .h1{
+        font-size: 1rem;
+    }
+    .sportIcon {
+      width: 60px; /* Adjust width for mobile */
+    }
+  
+    .descriptionBox h2 {
+      font-size: 1.4rem;
+    }
+  
+    .descriptionBox p {
+      font-size: 0.8rem;
+    }
+  
+    .eventDetails {
+      max-width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  /* iPhone 14 Pro Max Specific Adjustments */
+  @media (min-device-width: 430px) and (max-device-width: 430px) and (-webkit-device-pixel-ratio: 3) {
+    .h1{
+        font-size: .75rem;
+    }
+    .sportIcon {
+      width: 100px; /* Adjust width for iPhone 14 Pro Max */
+    }
+  
+    .descriptionBox h2 {
+      font-size: 1.9rem;
+    }
+  
+    .descriptionBox p {
+      font-size: 1.1rem;
+    }
+  
+    .eventDetails {
+      max-width: 850px;
+    }
+  }
+  
